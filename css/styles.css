@@ -40,10 +40,12 @@ a{
     color: #404BBF;
 }
 
+.contact{
+    font-style: normal;
+}
+
 .contact-link{
-    font-style: normal;
     color: #434455;
-    font-style: normal;
 }
 
 .hero-title{
