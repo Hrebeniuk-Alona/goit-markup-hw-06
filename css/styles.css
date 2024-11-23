@@ -34,7 +34,9 @@ a{
 }
 
 .menu-link:hover, 
-.menu-link:focus{
+.menu-link:focus,
+.contact-link:focus,
+.contact-link:hover{
     color: #404BBF;
 }
 
@@ -42,11 +44,6 @@ a{
     font-style: normal;
     color: #434455;
     font-style: normal;
-}
-
-.contact-link:focus, 
-.contact-link:hover{
-    color: #404BBF;
 }
 
 .hero-title{
