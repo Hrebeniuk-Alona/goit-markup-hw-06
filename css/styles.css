@@ -60,11 +60,14 @@ img{
                /* HEADER */
 
 .top-line .container{
-    border-bottom: 1px solid #e7e9fc;
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.top-line{
+     border-bottom: 1px solid #e7e9fc;
 }
 
 .nav-page{
@@ -113,10 +116,7 @@ img{
 
 .contact-list{
     display: flex;
-}
-
-.contact-item{
-    padding-right: 40px;
+    gap: 40px;
 }
 
 .contact-link{
@@ -129,7 +129,7 @@ img{
                /* HERO */
 
  .hero .container{
-    padding: 188px 316px;
+    padding: 188px 0px;
 }
 
 
@@ -140,7 +140,7 @@ img{
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
-    width: 496px;
+    max-width: 496px;
     margin-bottom: 48px;
 
 }
@@ -161,6 +161,9 @@ img{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     display: block;
     margin: 0 auto;
+    min-width: 169px;
+    height: 56px;
+    border: none;
 }
 
 .hero-button:hover, 
@@ -208,18 +211,20 @@ img{
 .team-list{
     display: flex;
     gap: 24px;
-    width: calc((100% - 72px) /4);
+   
 }
 
 .team-card{
     background-color: #fff;
     border-radius: 0 0 4px 4px;
     padding: 0px 0px 32px 0px;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08); 
+    width: calc((100% - 72px) /4);
 }
 
-.team-img{
-    margin-bottom: 32px;
+.team-info{
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .team-member{
@@ -251,7 +256,7 @@ img{
     text-align: center;
     text-transform: capitalize;
     color: #2e2f42;
-    margin-bottom: 32px;
+    margin-bottom: 72px;
 }
 
 
@@ -282,16 +287,18 @@ img{
 
 .footer{
     background: #2e2f42;
-    padding-top: 100px;padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.footer-info{
-    width: 264px;
+.logo-footer{
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-text{
     color: #f4f4fd;
-    margin-top: 16px;
+    max-width: 264px;
 }
 
 .logo-studio-footer{
