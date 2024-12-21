@@ -373,10 +373,95 @@
             </li>
          </ul>
         </div>
+
+        <div class="subscribe">
+          <p class="subscribe-text">Subscribe</p>
+         <div class="subscribe-wraper">
+            <input class="subscribe-input" type="email" placeholder="E-mail">
+            <button class="subscribe-button">Subscribe
+              <svg class="subscribe-icon" width="24" height="20">
+              <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+              </button>
+         </div>
+
+        </div>
     </div > 
      
 
     </footer>
+
+    <div class="backdroup (is-open)">
+      <div class="modal">
+        <p class="modal-text">Leave your contacts and we will call you back</p>
+          <button class="modal-button">
+            <svg class="icon-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <form>
+            <div class="form-wraper-cont">
+              <label class="form-user-label" for="form-user-name">Name</label>
+                <div class="form-user-icon-wraper">
+                  <input type="text" class="form-user-input" id="form-user-name" name="user-name" required>
+                  <svg class="form-user-icon" width="12" height="12">
+                    <use href="./images/icons.svg#icon-person"></use>
+                  </svg>
+                </input>
+                </div>
+              
+            </div>
+            <div class="form-wraper-cont">
+              <label class="form-user-label" for="form-user-phone">Phone</label>
+                <div class="form-user-icon-wraper">
+                  <input type="tel" class="form-user-input" id="form-user-phone" name="user-phone" required>
+                  <svg class="form-user-icon" width="13" height="13">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                  </input>
+                </div>
+              
+            </div>
+            <div class="form-wraper-cont">
+              <label class="form-user-label" for="form-user-email">Email</label>
+                <div class="form-user-icon-wraper">
+                  <input type="email" class="form-user-input" id="form-user-email" name="user-email" required>
+                  <svg class="form-user-icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-letter"></use>
+                  </svg>
+                  </input>
+                </div>
+              
+            </div>
+            <div class="form-wraper-cont">
+              <label class="form-user-label" for="form-user-cont">Comment</label>
+                <textarea name="user-coment" class="form-user-coment" id="form-user-cont" placeholder="Text input" required></textarea>
+              
+            </div>
+            <div class="form-wraper-checkbox">
+              <input class="checkbox visually-hidden" type="checkbox" name="checkbox" id="form-user-checkbox" required>
+              <label class="form-user-checkbox"  for="form-user-checkbox">
+                <span class="castom-checkbox">
+                  <svg class="castom-checkbox-icon" width="10" height="8">
+                    <use href="./images/icons.svg#icon-chec"></use>
+                  </svg>
+                </span>
+                I accept the terms and conditions of the 
+                <a href="#" class="castom-checkbox-link">Privacy Policy</a></label>
+            </div>
+
+          </form>
+          <div class="form-wraper-buttum">
+            <button class="form-buttum" type="submit">Send
+          </div>
+          
+
+          </button>
+        
+        
+
+      </div>
+    </div>
     
 </body>
 </html>
