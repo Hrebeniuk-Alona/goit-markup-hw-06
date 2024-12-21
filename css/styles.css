@@ -586,10 +586,14 @@ img{
  
 }
 
-.modal-button:hover{
+.modal-button:focus{
     background-color: #404BBF;
     border: none;
-    
+}
+
+.modal-button:hover, 
+.modal-button:focus{
+    fill:#ffffff;
 }
 
 .icon-close{
@@ -604,7 +608,7 @@ img{
 
 
 .form-wraper-cont{
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .form-user-label{
@@ -641,7 +645,8 @@ img{
 }
 
 .form-user-input:hover,
-.form-user-input:focus, .form-user-coment:hover,
+.form-user-input:focus, 
+.form-user-coment:hover,
 .form-user-coment:focus{
     border-color: 1px solid #4D5AE5;
 }
@@ -669,7 +674,7 @@ img{
 
 .form-user-coment::placeholder{
     font-size: 12px;
-    line-height: 1.167;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
   
