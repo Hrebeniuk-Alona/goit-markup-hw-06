@@ -471,22 +471,22 @@ img{
 .subscribe-input{
     border: 1px solid #fff;
     border-radius: 4px;
-    min-width: 264px;
+    width: 264px;
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: transparent; 
-    padding: 8px 24px;
-}
-
-.subscribe-input::placeholder{
-    font-weight: 400;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    color: #fff;
+    padding-left: 16px;
+    color: #ffffff;
 }
 
-.subscribe-wraper{
+.subscribe-input::placeholder{
+    color: #ffffff;
+}
+
+.form-subscribe{
     display: flex;
     gap: 24px;
    
@@ -495,9 +495,10 @@ img{
 .subscribe-button{
     border-radius: 4px;
     padding: 8px 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
-    background: #4d5ae5;
+    background-color: #4d5ae5;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -506,12 +507,14 @@ img{
     color: #fff;
     border: none;
     display: flex;
-   justify-content: space-between;
+   justify-content: center;
+   align-items: center;
    cursor: pointer;
 }
 
 .subscribe-icon {
     fill: #fff;
+    margin-left: 16px;
 
 }
 
@@ -534,9 +537,8 @@ img{
 }
 
 .modal{
-
     position: absolute;
-    top: 80px;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 4px;
@@ -546,6 +548,7 @@ img{
     background-color: #fcfcfc;
     padding: 24px;
     padding-top: 72px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -557,6 +560,9 @@ img{
 
 .modal-text{
     font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
     margin-bottom: 16px;
@@ -564,37 +570,47 @@ img{
 
 
 .modal-button{
-    position: absolute;
+    position: absolute;   display: flex;
+    justify-content: center;
+    align-items: center;
     top: 24px;
     right: 24px;
     width: 24px;
     height: 24px;
-    border: none;
+    padding: 0;
+    border:1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     background-color: #e7e9fc;
-    stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.1);
-    fill: #2e2f42;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+ 
 }
 
-.modal-button:hover,
-.modal-button:focus{
+.modal-button:hover{
     background-color: #404BBF;
+    border: none;
+    
+}
+
+.icon-close{
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-close:hover,
+.icon-close:focus{
     fill: #ffffff;
 }
 
+
 .form-wraper-cont{
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .form-user-label{
     display: block;
     font-size: 12px;
-    line-height: 1.167;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
     margin-bottom: 4px;
@@ -606,8 +622,9 @@ img{
     width: 100%;
     height: 40px;
     padding-left: 38px;
-    outline: none;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-user-icon-wraper{
@@ -626,7 +643,7 @@ img{
 .form-user-input:hover,
 .form-user-input:focus, .form-user-coment:hover,
 .form-user-coment:focus{
-    border: 1px solid #4D5AE5;
+    border-color: 1px solid #4D5AE5;
 }
 
 .form-user-input:focus + .form-user-icon{
@@ -635,14 +652,19 @@ img{
 
 .form-user-coment{
     width: 100%;
-    min-height: 120px;
+    height: 120px;
     resize: none;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    outline: none;
     border-radius: 4px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);  
-    padding-top: 8px;
-    padding-left: 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+    padding: 8px 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    outline: transparent;
 }
 
 .form-user-coment::placeholder{
@@ -669,12 +691,12 @@ img{
     cursor: pointer;
     fill: transparent;
     margin-right: 8px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 50ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-user-checkbox{
     font-size: 12px;
-    line-height: 1.167;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
     line-height: 1.33;
@@ -688,21 +710,20 @@ img{
 
 .checkbox:checked + .form-user-checkbox .castom-checkbox{
     background-color: #404BBF;
-    fill: #f4f4fd;;
+    fill: #f4f4fd;
+    border: none;
 }
 
-.form-wraper-buttum{
-    display: flex;
-    justify-content: center;
-}
 
 .form-buttum{
+    display: block;
+    font-family: "Roboto", sans-serif;
     border-radius: 4px;
     padding: 16px 32px;
     min-width: 169px;
     height: 56px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #4d5ae5;
+    background-color: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -710,4 +731,6 @@ img{
     text-align: center;
     color: #fff;
     border: none;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
